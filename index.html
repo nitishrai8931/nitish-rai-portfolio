@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#130d09">
+  <meta name="description" content="Nitish Rai is a Computer Science Engineering student in Ghaziabad, India, working across Linux administration, full-stack development, Python automation, networking, and AI agents.">
+  <title>Nitish Rai — Computer Science Engineer</title>
+  <style>
+    :root{color-scheme:dark;--bg:#130d09;--ink:#fff4e5;--muted:#c1a990;--accent:#ffc18b;--line:#453021;--panel:#1c130e;--cell:20px}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}body{min-height:100svh;overflow:hidden}button,a{font:inherit}a{color:inherit}
+    .app{height:100svh;min-height:540px;padding:20px;display:grid;grid-template-columns:minmax(310px,26vw) 1fr;gap:0;background:var(--bg)}
+    .sidebar{position:relative;z-index:2;background:var(--bg);padding:32px 34px;display:flex;flex-direction:column;min-width:0}.identity{margin:12px 0 24px}.identity h1{margin:0 0 22px;font-size:clamp(25px,2vw,33px);letter-spacing:-1.2px;font-weight:600}.identity p{max-width:370px;margin:0;color:#f3e5d3;font-size:17px;line-height:1.65}.eyebrow{font:10px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;text-transform:uppercase;letter-spacing:1.6px;color:var(--muted)}
+    .quick-links{display:flex;flex-wrap:wrap;gap:9px;margin:-5px 0 24px}.quick-link{display:inline-flex;align-items:center;gap:8px;padding:10px 13px;border:1px solid #805530;background:#21160f;color:#ffd09d;text-decoration:none;font-size:13px;transition:background .2s,border-color .2s,transform .2s}.quick-link:hover,.quick-link:focus-visible{background:#3a2415;border-color:#ffc18b;transform:translateY(-2px);outline:2px solid #ffc18b;outline-offset:2px}.quick-link span{color:#ffe6c6;font-size:15px}
+    .link-group{display:grid;gap:3px;margin:6px 0 21px}.link-group .eyebrow{margin:0 0 6px}.nav-link{width:fit-content;max-width:100%;padding:4px 0;border:0;background:none;color:var(--accent);text-align:left;text-decoration:none;cursor:pointer;font-size:17px;line-height:1.5;transition:color .2s,transform .2s}.nav-link:hover,.nav-link:focus-visible{color:#ffe4ae;transform:translateX(4px);outline:none}.nav-link:focus-visible{box-shadow:0 2px 0 currentColor}.social{display:grid;gap:5px;margin-top:auto}.social .nav-link{font-size:15px}.location{padding-top:16px;margin-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+    .art{position:relative;isolation:isolate;overflow:hidden;border:1px solid #503722;outline:1px solid #c7803d55;outline-offset:3px;background:#28150b;min-width:0}.art canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.art:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#160e09aa,transparent 18%,transparent 80%,#160e0922),linear-gradient(0deg,#160e0933,transparent 20%)}.art-label{position:absolute;z-index:1;bottom:26px;right:28px;padding:9px 12px;background:#130d09c9;border:1px solid #ffffff25;color:#fff0da;font:10px ui-monospace,monospace;letter-spacing:1.4px;text-transform:uppercase;backdrop-filter:blur(5px)}.sound{position:absolute;z-index:2;right:20px;top:20px;border:1px solid #ffffff35;border-radius:999px;background:#130d09aa;color:var(--ink);padding:8px 11px;font-size:12px;cursor:pointer}.sound:hover{border-color:var(--accent)}
+    .playful-note{position:absolute;z-index:1;padding:11px 15px;border:1px solid #fff2d748;background:#130d09c9;color:#fff5e8;box-shadow:0 8px 24px #0003;backdrop-filter:blur(5px);font-size:clamp(13px,1.15vw,17px);line-height:1.35;letter-spacing:.01em;animation:noteFloat 5s ease-in-out infinite}.playful-note strong{color:#ffd88d;font-weight:600}.note-one{top:11%;left:9%;animation-delay:-1s}.note-two{top:31%;left:40%;max-width:270px;animation-delay:-3s}.note-three{top:17%;right:10%;animation-delay:-2s}.note-four{bottom:18%;left:19%;animation-delay:-4s}@keyframes noteFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+    .detail{position:absolute;z-index:5;right:20px;top:20px;bottom:20px;width:min(460px,calc(100% - 40px));padding:34px;background:#17100cf2;border:1px solid #875b35;box-shadow:0 18px 70px #0009;overflow:auto;transform:translateX(calc(100% + 45px));transition:transform .35s cubic-bezier(.2,.8,.2,1)}.detail.open{transform:translateX(0)}.detail-close{float:right;border:1px solid #ffffff35;background:none;color:var(--ink);padding:7px 10px;cursor:pointer}.detail h2{font-size:34px;letter-spacing:-1px;margin:38px 0 12px}.detail p{color:#e7d4be;line-height:1.7}.detail ul{padding-left:19px;color:#e7d4be;line-height:1.8}.detail .eyebrow{clear:both;padding-top:12px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:760px){body{overflow:auto}.app{height:auto;min-height:100svh;padding:12px;grid-template-columns:1fr;grid-template-rows:auto minmax(420px,58svh);}.sidebar{padding:24px 22px 18px;min-height:510px}.identity{margin-top:0}.identity h1{font-size:30px}.identity p{font-size:16px}.link-group{margin-bottom:13px}.social{grid-template-columns:repeat(2,max-content);column-gap:22px;margin-top:14px}.social .eyebrow{grid-column:1/-1}.location{margin-top:12px;padding-top:11px}.art{grid-row:1;min-height:390px}.art-label{font-size:9px;right:13px;bottom:13px}.sound{top:12px;right:12px}.detail{position:fixed;inset:12px;width:auto;max-height:calc(100svh - 24px);padding:26px}.detail h2{font-size:29px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <main class="app">
+    <aside class="sidebar" aria-label="Portfolio navigation">
+      <section class="identity">
+        <p class="eyebrow">Portfolio / 2026</p>
+        <h1>Nitish Rai</h1>
+        <p>I’m a Computer Science Engineering student in Ghaziabad, India. I work across Linux administration, full-stack development, Python automation, networking, and AI agents. I enjoy building reliable applications, automating repetitive tasks, and connecting software with real-world infrastructure.</p>
+      </section>
+      <nav class="quick-links" aria-label="Professional profiles">
+        <a class="quick-link" href="https://github.com/nitishrai8931" target="_blank" rel="noopener noreferrer">GitHub <span>@nitishrai8931 ↗</span></a>
+        <a class="quick-link" href="https://www.linkedin.com/in/nitishrai-dev?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn <span>nitishrai-dev ↗</span></a>
+      </nav>
+      <nav class="link-group" aria-label="Selected experience">
+        <p class="eyebrow">Experience</p>
+        <button class="nav-link" data-detail="nic">NIC · Developer Intern</button>
+      </nav>
+      <nav class="link-group" aria-label="Projects">
+        <p class="eyebrow">Projects</p>
+        <button class="nav-link" data-detail="statquest">StatQuest</button>
+        <button class="nav-link" data-detail="bhoomiflow">BhoomiFlow</button>
+        <button class="nav-link" data-detail="study">Study Tracker</button>
+        <button class="nav-link" data-detail="cli">CLI Tools</button>
+        <button class="nav-link" data-detail="linux">Linux Infrastructure</button>
+      </nav>
+      <nav class="link-group" aria-label="Areas of focus">
+        <p class="eyebrow">Currently exploring</p>
+        <a class="nav-link" href="#focus" data-detail="focus">Backend · Linux · DevOps · AI</a>
+      </nav>
+      <div class="social" aria-label="Contact links">
+        <p class="eyebrow">Find me online</p>
+        <a class="nav-link" href="https://www.linkedin.com/in/nitishrai-dev?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noreferrer">LinkedIn · nitishrai-dev ↗</a>
+        <a class="nav-link" href="https://github.com/nitishrai8931" target="_blank" rel="noreferrer">GitHub · @nitishrai8931 ↗</a>
+        <a class="nav-link" href="mailto:nitishrai9559@gmail.com">Email ↗</a>
+      </div>
+      <div class="location">Ghaziabad, Uttar Pradesh, India <span aria-hidden="true">·</span> Open to learning</div>
+    </aside>
+    <section class="art" aria-label="Animated warm-color tile artwork">
+      <canvas id="tiles" aria-hidden="true"></canvas>
+      <div class="playful-note note-one">Hello ji <strong>👋</strong></div>
+      <div class="playful-note note-two">I know aap soch rahe ho:<br><strong>“Ye kaun hai?”</strong></div>
+      <div class="playful-note note-three">Bataun kya? <strong>👀</strong></div>
+      <div class="playful-note note-four">Just for my fun ✦</div>
+      <span class="art-label">Building, learning, iterating</span>
+      <button class="sound" type="button" id="motionToggle" aria-pressed="true" aria-label="Pause animation">Ⅱ &nbsp; Motion</button>
+      <aside class="detail" id="detail" aria-live="polite" aria-hidden="true">
+        <button class="detail-close" id="closeDetail" type="button" aria-label="Close details">Close ×</button>
+        <p class="eyebrow" id="detailLabel"></p><h2 id="detailTitle"></h2><div id="detailBody"></div>
+      </aside>
+    </section>
+  </main>
+  <script>
+    const copy={
+      nic:{label:"Experience / May 2026",title:"National Informatics Centre",body:"<p><strong>Developer Intern · Shastri Park, Delhi</strong></p><p>Worked on networking and software development tasks in a government IT environment. Contributed to a network monitoring and management portal, with hands-on exposure to IP addressing, DNS, connectivity troubleshooting, Linux systems, and enterprise IT infrastructure.</p>"},
+      statquest:{label:"Project / AI · Learning",title:"StatQuest",body:"<p>An AI-enabled learning platform concept designed to identify competency gaps and recommend personalized learning.</p><ul><li>Plan learning recommendations around competency gaps.</li><li>Generate quizzes and MCQs from uploaded learning materials.</li><li>Explore AI-agent workflows for personalized study.</li></ul>"},
+      bhoomiflow:{label:"Project / GovTech · Workflow",title:"BhoomiFlow",body:"<p>A digital land acquisition and management platform concept for monitoring processes and supporting decisions.</p><ul><li>Organize land records and documents.</li><li>Support role-based workflows and status tracking.</li><li>Explore analytics and AI-assisted workflow automation.</li></ul>"},
+      study:{label:"Project / MERN · Productivity",title:"Study Tracker",body:"<p>A planned learning platform to organize study sessions and monitor learning progress.</p><ul><li>Track study activities and productivity.</li><li>Organize learning resources.</li><li>Planned backend APIs with Node.js, Express.js, and MongoDB.</li></ul>"},
+      cli:{label:"Practice / Node.js · Git",title:"CLI Tools & Developer Utilities",body:"<p>Built and experimented with Node.js command-line applications and developer utilities, while practicing Git and GitHub workflows.</p><ul><li>Cloning, branching, remotes, commits, and pushing.</li><li>Repository management and command-line workflows.</li></ul>"},
+      linux:{label:"Practice / RHEL 9 · RHCSA",title:"Linux Infrastructure",body:"<p>Hands-on administration practice with Red Hat Enterprise Linux and server infrastructure.</p><ul><li>SSH, Apache, SELinux, LVM, NFS, users, and networking.</li><li>Troubleshooting boot, kernel, storage, filesystem, VMware, and network issues.</li><li>Preparing for RHCSA.</li></ul>"},
+      focus:{label:"Focus / Learning & building",title:"Areas I work across",body:"<ul><li><strong>Linux administration:</strong> RHEL 9, SSH, systemd, SELinux, LVM, NFS, Apache, user management, and networking while preparing for RHCSA.</li><li><strong>Full-stack development:</strong> MongoDB, Express.js, React, Node.js, and REST APIs.</li><li><strong>Python and automation:</strong> Scripts, CLI tools, and developer utilities for repetitive tasks.</li><li><strong>Networking and DevOps:</strong> IP and DNS troubleshooting, Git and GitHub, Docker, Kubernetes, and VMware.</li><li><strong>Computer science:</strong> DSA, OOP, DBMS, operating systems, and computer networks.</li></ul>"}
+    };
+    const detail=document.querySelector('#detail'), detailTitle=document.querySelector('#detailTitle'), detailLabel=document.querySelector('#detailLabel'), detailBody=document.querySelector('#detailBody');
+    function close(){detail.classList.remove('open');detail.setAttribute('aria-hidden','true')}
+    document.querySelectorAll('[data-detail]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();const d=copy[el.dataset.detail];if(!d)return;detailLabel.textContent=d.label;detailTitle.textContent=d.title;detailBody.innerHTML=d.body;detail.classList.add('open');detail.setAttribute('aria-hidden','false');document.querySelector('#closeDetail').focus()}));
+    document.querySelector('#closeDetail').addEventListener('click',close);document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+    const canvas=document.querySelector('#tiles'),ctx=canvas.getContext('2d'),motion=document.querySelector('#motionToggle');let w=0,h=0,dpr=1,frame=0,paused=false,raf=0,cell=20;
+    const stops=[[19,13,9],[94,37,18],[218,73,26],[255,142,45],[255,218,106]];
+    function colorAt(t){t=Math.max(0,Math.min(.999,t))*(stops.length-1);let i=Math.floor(t),f=t-i,a=stops[i],b=stops[i+1];return `rgb(${a.map((v,k)=>Math.round(v+(b[k]-v)*f)).join(',')})`}
+    function resize(){const r=canvas.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,2);w=r.width;h=r.height;canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw()}
+    function draw(){ctx.clearRect(0,0,w,h);const cols=Math.ceil(w/cell),rows=Math.ceil(h/cell),time=frame*.006;for(let y=0;y<rows;y++)for(let x=0;x<cols;x++){const nx=x/cols,ny=y/rows;const wave1=Math.sin(nx*5.5+ny*3-time)*.16;const wave2=Math.cos(ny*7-nx*2+time*.7)*.12;const glow=Math.exp(-((nx-(.32+Math.sin(time*.5)*.08))**2+(ny-(.61+Math.cos(time*.42)*.07))**2)*17)*.48;const value=.24+nx*.28+wave1+wave2+glow;ctx.fillStyle=colorAt(value);ctx.fillRect(x*cell,y*cell,cell-1,cell-1)}if(!paused){frame++;raf=requestAnimationFrame(draw)}}
+    new ResizeObserver(resize).observe(canvas);resize();motion.addEventListener('click',()=>{paused=!paused;motion.setAttribute('aria-pressed',String(!paused));motion.setAttribute('aria-label',paused?'Resume animation':'Pause animation');motion.innerHTML=paused?'▶ &nbsp; Motion':'Ⅱ &nbsp; Motion';if(!paused)draw();else cancelAnimationFrame(raf)});
+  </script>
+</body>
+</html>
