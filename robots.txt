@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nitishrai8931.github.io/nitish-rai-portfolio/sitemap.xml
